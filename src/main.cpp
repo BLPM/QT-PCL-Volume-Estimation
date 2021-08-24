@@ -1,14 +1,11 @@
-#include "pclviewer.h"
+#include "pcapviewer.h"
 #include <QApplication>
 #include <QMainWindow>
 
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
   QApplication a (argc, argv);
-  PCLViewer w;
+  pcapViewer w;
   w.show ();
-
-
-
   return a.exec ();
 }

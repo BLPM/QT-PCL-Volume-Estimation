@@ -87,6 +87,7 @@ PCLViewer::RGBsliderReleased ()
   ui->qvtkWidget->update ();
 }
 
+
 void
 PCLViewer::pSliderValueChanged (int value)
 {

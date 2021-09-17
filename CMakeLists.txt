@@ -25,7 +25,7 @@ include_directories( ${PCL_INCLUDE_DIRS} )
 add_definitions( ${PCL_DEFINITIONS} )
 link_directories( ${PCL_LIBRARY_DIRS} )
 
-add_executable(${PROJECT_NAME} WIN32 ./src/main.cpp ./src/pcapviewer.cpp ./src/pcapViewer.ui)
+add_executable(${PROJECT_NAME} ./src/main.cpp ./src/pcapviewer.cpp ./src/pcapViewer.ui)
 target_link_libraries(${PROJECT_NAME} ${PCL_LIBRARIES})
 
 qt5_use_modules(${PROJECT_NAME} Widgets)

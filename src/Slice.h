@@ -1,7 +1,14 @@
 #include <Eigen/Dense>
 #include <pcl/point_types.h>
-#pragma once
-
+#include <vtkActor.h>
+#include <vtkCamera.h>
+#include <vtkConeSource.h>
+#include <vtkNamedColors.h>
+#include <vtkNew.h>
+#include <vtkPolyDataMapper.h>
+#include <vtkProperty.h>
+#include <vtkRenderWindow.h>
+#include <vtkRenderer.h>
 class Slice
 {
 	private:

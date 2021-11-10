@@ -12,8 +12,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1258</width>
-    <height>720</height>
+    <width>1099</width>
+    <height>488</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -53,284 +53,590 @@
    <bool>false</bool>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
    <widget class="QVTKWidget" name="qvtkWidget">
     <property name="geometry">
      <rect>
-      <x>435</x>
-      <y>21</y>
-      <width>806</width>
-      <height>661</height>
+      <x>361</x>
+      <y>10</y>
+      <width>720</width>
+      <height>451</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
     </property>
    </widget>
-   <widget class="QSplitter" name="splitter">
+   <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
-      <x>11</x>
-      <y>23</y>
-      <width>417</width>
-      <height>661</height>
+      <x>10</x>
+      <y>10</y>
+      <width>346</width>
+      <height>149</height>
      </rect>
     </property>
-    <property name="orientation">
-     <enum>Qt::Vertical</enum>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
     </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QTextEdit" name="cloudInf_textedit">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>321</width>
+       <height>91</height>
+      </rect>
+     </property>
+    </widget>
     <widget class="QLabel" name="PointCloudInf_text">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>96</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>微軟正黑體</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>點雲處理測試</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>164</y>
+      <width>346</width>
+      <height>87</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="title">
+     <string>濾波</string>
+    </property>
+    <widget class="QPushButton" name="reserve_4">
+     <property name="geometry">
+      <rect>
+       <x>92</x>
+       <y>45</y>
+       <width>75</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="font">
+      <font>
+       <family>微軟正黑體</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>保留4</string>
+     </property>
+     <property name="checkable">
+      <bool>false</bool>
+     </property>
+     <property name="default">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="reserve_2">
+     <property name="geometry">
+      <rect>
+       <x>267</x>
+       <y>11</y>
+       <width>75</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="font">
+      <font>
+       <family>微軟正黑體</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>保留2</string>
+     </property>
+     <property name="checkable">
+      <bool>false</bool>
+     </property>
+     <property name="default">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="reserve_3">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>45</y>
+       <width>75</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="font">
+      <font>
+       <family>微軟正黑體</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>保留3</string>
+     </property>
+     <property name="checkable">
+      <bool>false</bool>
+     </property>
+     <property name="default">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="reserve">
+     <property name="geometry">
+      <rect>
+       <x>186</x>
+       <y>11</y>
+       <width>75</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="font">
+      <font>
+       <family>微軟正黑體</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>保留1</string>
+     </property>
+     <property name="checkable">
+      <bool>false</bool>
+     </property>
+     <property name="default">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="filter_button_rmoutlier">
+     <property name="geometry">
+      <rect>
+       <x>92</x>
+       <y>11</y>
+       <width>88</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="font">
+      <font>
+       <family>微軟正黑體</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>移除離群點</string>
+     </property>
+     <property name="checkable">
+      <bool>false</bool>
+     </property>
+     <property name="default">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="filter_button_pass">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>11</y>
+       <width>75</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="font">
+      <font>
+       <family>微軟正黑體</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>直通濾波</string>
+     </property>
+     <property name="checkable">
+      <bool>false</bool>
+     </property>
+     <property name="default">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="VolumeEstimate_button">
+     <property name="geometry">
+      <rect>
+       <x>267</x>
+       <y>45</y>
+       <width>75</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="font">
+      <font>
+       <family>微軟正黑體</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>計算</string>
+     </property>
+     <property name="checkable">
+      <bool>false</bool>
+     </property>
+     <property name="default">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="LoadPC_button">
+     <property name="geometry">
+      <rect>
+       <x>186</x>
+       <y>45</y>
+       <width>75</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="font">
+      <font>
+       <family>微軟正黑體</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>載入檔案</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>256</y>
+      <width>346</width>
+      <height>205</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="title">
+     <string>滑鼠選定點</string>
+    </property>
+    <widget class="QLabel" name="point1_label">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>12</y>
+       <width>59</width>
+       <height>30</height>
+      </rect>
+     </property>
      <property name="font">
       <font>
        <family>Yu Gothic UI Semibold</family>
-       <pointsize>36</pointsize>
+       <pointsize>16</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="text">
-      <string>點雲資訊</string>
+      <string>point1</string>
      </property>
     </widget>
-    <widget class="QTextEdit" name="cloudInf_textedit">
-     <property name="enabled">
-      <bool>true</bool>
+    <widget class="QLineEdit" name="point1_x_lineEdit">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>73</y>
+       <width>112</width>
+       <height>20</height>
+      </rect>
      </property>
     </widget>
-    <widget class="QWidget" name="">
-     <layout class="QVBoxLayout" name="verticalLayout">
-      <item>
-       <widget class="QLabel" name="point1_label">
-        <property name="font">
-         <font>
-          <family>Yu Gothic UI Semibold</family>
-          <pointsize>16</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>point1</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_3">
-        <item>
-         <widget class="QLabel" name="point1_x_label">
-          <property name="font">
-           <font>
-            <family>Yu Gothic UI Semibold</family>
-            <pointsize>11</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>x</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="point1_y_label">
-          <property name="font">
-           <font>
-            <family>Yu Gothic UI Semibold</family>
-            <pointsize>11</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>y</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="point1_z_label">
-          <property name="font">
-           <font>
-            <family>Yu Gothic UI Semibold</family>
-            <pointsize>11</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>z</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <layout class="QHBoxLayout" name="horizontalLayout">
-        <item>
-         <widget class="QLineEdit" name="point1_x_lineEdit"/>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="point1_y_lineEdit"/>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="point1_z_lineEdit"/>
-        </item>
-       </layout>
-      </item>
-     </layout>
+    <widget class="QLineEdit" name="point1_z_lineEdit">
+     <property name="geometry">
+      <rect>
+       <x>227</x>
+       <y>73</y>
+       <width>112</width>
+       <height>20</height>
+      </rect>
+     </property>
     </widget>
-    <widget class="QWidget" name="layoutWidget">
-     <layout class="QVBoxLayout" name="verticalLayout_3">
-      <item>
-       <layout class="QVBoxLayout" name="verticalLayout_4">
-        <item>
-         <widget class="QLabel" name="point2_label">
-          <property name="font">
-           <font>
-            <family>Yu Gothic UI Semibold</family>
-            <pointsize>16</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>point2</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_4">
-          <item>
-           <widget class="QLabel" name="point2_x_label_2">
-            <property name="font">
-             <font>
-              <family>Yu Gothic UI Semibold</family>
-              <pointsize>11</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
-             </font>
-            </property>
-            <property name="text">
-             <string>x</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLabel" name="point2_y_label">
-            <property name="font">
-             <font>
-              <family>Yu Gothic UI Semibold</family>
-              <pointsize>11</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
-             </font>
-            </property>
-            <property name="text">
-             <string>y</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLabel" name="point2_z_label">
-            <property name="font">
-             <font>
-              <family>Yu Gothic UI Semibold</family>
-              <pointsize>11</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
-             </font>
-            </property>
-            <property name="text">
-             <string>z</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_5">
-          <item>
-           <widget class="QLineEdit" name="point2_x_lineEdit"/>
-          </item>
-          <item>
-           <widget class="QLineEdit" name="point2_y_lineEdit"/>
-          </item>
-          <item>
-           <widget class="QLineEdit" name="point2_z_lineEdit"/>
-          </item>
-         </layout>
-        </item>
-       </layout>
-      </item>
-     </layout>
+    <widget class="QLabel" name="point1_y_label">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>48</y>
+       <width>16</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>微軟正黑體</family>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>y</string>
+     </property>
     </widget>
-    <widget class="QWidget" name="layoutWidget">
-     <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="0,0,0">
-      <property name="spacing">
-       <number>20</number>
-      </property>
-      <item>
-       <widget class="QPushButton" name="LoadPC_button">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>20</pointsize>
-         </font>
-        </property>
-        <property name="text">
-         <string>載入點雲</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="filter_button">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>20</pointsize>
-         </font>
-        </property>
-        <property name="text">
-         <string>切範圍</string>
-        </property>
-        <property name="checkable">
-         <bool>false</bool>
-        </property>
-        <property name="default">
-         <bool>false</bool>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="VolumeEstimate_button">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>20</pointsize>
-         </font>
-        </property>
-        <property name="text">
-         <string>計算</string>
-        </property>
-        <property name="checkable">
-         <bool>false</bool>
-        </property>
-        <property name="default">
-         <bool>false</bool>
-        </property>
-       </widget>
-      </item>
-     </layout>
+    <widget class="QLabel" name="point1_x_label">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>48</y>
+       <width>16</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>微軟正黑體</family>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>x</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="point1_y_lineEdit">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>73</y>
+       <width>91</width>
+       <height>20</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="point1_z_label">
+     <property name="geometry">
+      <rect>
+       <x>227</x>
+       <y>48</y>
+       <width>16</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>微軟正黑體</family>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>z</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="point2_y_label">
+     <property name="geometry">
+      <rect>
+       <x>123</x>
+       <y>137</y>
+       <width>16</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Yu Gothic UI Semibold</family>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>y</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="point2_z_label">
+     <property name="geometry">
+      <rect>
+       <x>234</x>
+       <y>137</y>
+       <width>16</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Yu Gothic UI Semibold</family>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>z</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="point2_x_lineEdit">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>163</y>
+       <width>105</width>
+       <height>20</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="point2_y_lineEdit">
+     <property name="geometry">
+      <rect>
+       <x>123</x>
+       <y>163</y>
+       <width>105</width>
+       <height>20</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="point2_x_label_2">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>137</y>
+       <width>16</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Yu Gothic UI Semibold</family>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>x</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="point2_z_lineEdit">
+     <property name="geometry">
+      <rect>
+       <x>234</x>
+       <y>163</y>
+       <width>105</width>
+       <height>20</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="point2_label">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>101</y>
+       <width>63</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Yu Gothic UI Semibold</family>
+       <pointsize>16</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>point2</string>
+     </property>
     </widget>
    </widget>
   </widget>

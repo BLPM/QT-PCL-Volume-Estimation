@@ -128,9 +128,8 @@ error =abs((Truth-Volume))/Truth*100
 
 %{
 r = 20.014;
-Truth =(((4/3)*pi*r^3))/2;
-
-error =abs((Truth-Volume)/Truth)*100
+Truth =(((4/3)*pi*r^3));
+error =abs((Truth-35493.5)/Truth)*100
 
 %}
 

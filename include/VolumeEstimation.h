@@ -1,5 +1,6 @@
 #include <iostream>
 #include <typeinfo>
+#include <vector>
 // Qt
 #include <QMainWindow>
 #include <QFileDialog>
@@ -7,8 +8,10 @@
 // Point Cloud Library
 #include <pcl/io/ply_io.h>
 #include <pcl/io/pcd_io.h>
+
 #include <pcl/point_cloud.h>
 #include <pcl/point_types.h>
+
 #include <pcl/visualization/cloud_viewer.h>
 #include <pcl/filters/passthrough.h> 
 #include <pcl/filters/voxel_grid.h>
@@ -17,14 +20,19 @@
 #include <pcl/segmentation/sac_segmentation.h>
 #include <pcl/filters/extract_indices.h>
 #include <pcl/filters/statistical_outlier_removal.h>
+#include <pcl/filters/crop_hull.h>
+#include <pcl/surface/concave_hull.h>
+
 // Visualization Toolkit (VTK)
 #include <vtkRenderWindow.h>
+
 
 typedef pcl::PointXYZ PointT;
 typedef pcl::PointCloud<PointT> PointCloudT;
 
 struct callback_args {
     // structure used to pass arguments to the callback function
+	PointCloudT::Ptr cloud;
 	PointCloudT::Ptr clicked_points_3d;
     pcl::visualization::PCLVisualizer::Ptr viewerPtr;
 };
@@ -49,7 +57,8 @@ class VolumeEstimation : public QMainWindow
 		void InputFile_clicked();
 		void PassFilter_clicked();
 		void RemoveOutoutlier_clicked();
-
+		void ConvexHullFilter_clicked();
+		void SaveFile_clicked();
 
 	protected:
 
@@ -57,9 +66,7 @@ class VolumeEstimation : public QMainWindow
 		pcl::PointCloud<pcl::PointXYZ>::Ptr cloud;
 		pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_filtered;
 		pcl::PassThrough<pcl::PointXYZ> pass;
-
-
-
+		pcl::StatisticalOutlierRemoval<pcl::PointXYZ> sor;
 
 	private:
 	    Ui::VolumeEstimation *ui;
